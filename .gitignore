@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+
+# Env — never commit credentials
+.env
+.env.local
+frontend/.env*
+!frontend/.env.example
+backend/.env*
+!backend/.env.example
+
+# Runtime data
+backend/data/
+
+# Model weights. Reproducible via scripts/export_model.py and
+# backend/scripts/fetch_model.py — see models/README.md before shipping.
+models/*
+!models/README.md
+
+# CLIP text-encoder cache, downloaded on first open-vocabulary inference.
+weights/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

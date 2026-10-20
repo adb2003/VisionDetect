@@ -1,0 +1,20 @@
+# VisionDetect backend — pinned to the versions this app was built and tested against.
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+python-multipart==0.0.9
+numpy==2.1.1
+opencv-python-headless==4.10.0.84
+pillow==10.4.0
+
+# Inference. onnxruntime is the default serving path and is all that the
+# shipped ONNX models need.
+onnxruntime==1.29.0
+
+# Only required for the `ultralytics` backend (.pt checkpoints, auto-download
+# and open-vocabulary models). It pulls PyTorch, which is a large download; omit
+# both lines to run ONNX-only.
+ultralytics==8.4.128
+
+# For CUDA, replace onnxruntime above with onnxruntime-gpu and install a CUDA
+# build of torch from https://pytorch.org/get-started/locally/
